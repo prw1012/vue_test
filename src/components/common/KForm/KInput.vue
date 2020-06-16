@@ -2,9 +2,9 @@
  * @Author: RONGWEI PENG
  * @Date: 2020-06-14 21:04:33
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-15 15:40:31
+ * @LastEditTime: 2020-06-16 21:24:50
  * @FilePath: /vue02/src/components/common/KForm/Kinput.vue
--->
+--> 
 <template>
   <div>
     <input :type="type" :value="value" @input="onInput" v-bind="$attrs" />

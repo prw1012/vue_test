@@ -2,17 +2,18 @@
  * @Author: RONGWEI PENG
  * @Date: 2020-06-10 22:11:26
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-14 21:22:30
+ * @LastEditTime: 2020-06-16 22:15:51
  * @FilePath: /vue02/src/App.vue
---> 
+-->
 <template>
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>|
-      <router-link to="/kform">KForm</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/kform">KForm</router-link> | 
+      <router-link to="/mform">MForm</router-link> 
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

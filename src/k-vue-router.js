@@ -1,3 +1,10 @@
+/*
+ * @Author: RONGWEI PENG
+ * @Date: 2020-06-14 06:58:57
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2020-06-16 21:22:09
+ * @FilePath: /vue02/src/k-vue-router.js
+ */ 
 let Vue;
 
 export default class KVueRouter {
@@ -47,7 +54,7 @@ export default class KVueRouter {
         to: String,
       },
       render(h) {
-        console.log('console',  this.$slots);
+        // console.log('console',  this.$slots);
         return h('a', { attrs: { href: '#' + this.to } }, [
           this.$slots.default,
         ]);
