@@ -1,26 +1,31 @@
 <!--
  * @Author: RONGWEI PENG
  * @Date: 2020-06-17 09:15:42
- * @LastEditTime: 2020-06-17 17:37:47
+ * @LastEditTime: 2020-06-17 21:15:43
  * @LastEditors: Do not edit
- * @FilePath: \vue_test\src\components\common\MForm\index.vue
+ * @FilePath: /vue02/src/components/common/MForm/index.vue
  * @Description: 
 -->
 <template>
-  <KForm :model="model" :rules="rules">
-    <KFormItem label="用户名" prop="username">
-      <KInput v-model="model.username" />
-    </KFormItem>
-    <KFormItem label="密码" prop="password">
-      <KInput v-model="model.password" />
-    </KFormItem>
-  </KForm>
+  <div>
+    <KForm :model="model" :rules="rules" ref="form">
+      <KFormItem label="用户名" prop="username">
+        <KInput v-model="model.username" />
+      </KFormItem>
+      <KFormItem label="密码" prop="password">
+        <KInput v-model="model.password" />
+      </KFormItem>
+      <KFormItem>
+        <button @click="submit">submit</button>
+      </KFormItem>
+    </KForm>
+  </div>
 </template>
 
 <script>
-import KInput from './KInput';
-import KFormItem from './KFormItem';
-import KForm from './KForm';
+import KInput from './KInput.vue';
+import KFormItem from './KFormItem.vue';
+import KForm from './KForm.vue';
 
 export default {
   name: 'Form',
@@ -40,6 +45,17 @@ export default {
         password: { required: true, message: '密码不能为空！' },
       },
     };
+  },
+  methods: {
+    submit() {
+      this.$refs.form.validate(isValidate => {
+        if (isValidate) {
+          alert('登陆成功');
+        } else {
+          alert('登陆失败');
+        }
+      });
+    },
   },
 };
 </script>
