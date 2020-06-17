@@ -2,8 +2,8 @@
  * @Author: RONGWEI PENG
  * @Date: 2019-09-28 22:11:06
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-15 16:40:17
- * @FilePath: /vue02/src/components/common/KForm/index.vue
+ * @LastEditTime: 2020-06-17 09:55:11
+ * @FilePath: \vue_test\src\components\common\KForm\index.vue
 -->
 <template>
   <div>

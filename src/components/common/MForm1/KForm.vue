@@ -1,10 +1,9 @@
 <!--
  * @Author: RONGWEI PENG
- * @Date: 2020-06-17 09:15:42
- * @LastEditTime: 2020-06-17 17:25:02
+ * @Date: 2020-06-16 21:35:41
  * @LastEditors: Do not edit
+ * @LastEditTime: 2020-06-17 09:37:14
  * @FilePath: \vue_test\src\components\common\MForm\KForm.vue
- * @Description: 
 -->
 <template>
   <div>
@@ -15,6 +14,9 @@
 <script>
 export default {
   name: 'KForm',
+  provide() {
+    return { form: this };
+  },
   props: {
     model: {
       type: Object,
@@ -24,18 +26,18 @@ export default {
       type: Object,
     },
   },
-  methods: {
-    name() {
-      const validateList = this.$children
-        // .filter(item => item.prop)
-        .forEach(item => {
-          console.log('console', item);
-        });
 
-      console.log('validateList->', validateList);
+  methods: {
+    validate(cb) {
+      const validateList = this.$children
+        .filter(item => item.prop)
+        .map(item => item.validate());
+      Promise.all(validateList)
+        .then(() => cb(true))
+        .catch(() => cb(false));
     },
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
