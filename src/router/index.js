@@ -2,7 +2,7 @@
  * @Author: RONGWEI PENG
  * @Date: 2020-06-10 22:14:50
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-16 21:32:05
+ * @LastEditTime: 2020-06-18 20:44:01
  * @FilePath: /vue02/src/router/index.js
  */
 
@@ -30,11 +30,11 @@ const routes = [
     name: 'KForm',
     component: () => import('../components/common/KForm/index.vue'),
   },
-  {
-    path: '/mform',
-    name: 'MForm',
-    component: () => import('../components/common/MForm/index.vue'),
-  },
+  // {
+  //   path: '/mform',
+  //   name: 'MForm',
+  //   component: () => import('../components/common/MForm/index.vue'),
+  // },
 ];
 
 const router = new VueRouter({
