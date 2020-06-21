@@ -2,7 +2,7 @@
  * @Author: RONGWEI PENG
  * @Date: 2019-09-28 22:11:06
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-18 21:47:13
+ * @LastEditTime: 2020-06-19 21:16:29
  * @FilePath: /vue02/src/components/common/KForm/index.vue
 -->
 <template>
@@ -35,8 +35,8 @@
 import KInput from '@/components/common/KForm/KInput.vue';
 import KFormItem from '@/components/common/KForm/KFormItem.vue';
 import KForm from '@/components/common/KForm/KForm.vue';
-import create from '@/utils/create'
-import Notice from '@/components/Notice'
+import create from '@/utils/create';
+import Notice from '@/components/Notice';
 
 export default {
   components: {
@@ -54,22 +54,24 @@ export default {
     };
   },
   methods: {
-
     submit() {
       this.$refs.loginForm.validate(isValidate => {
         // 创建弹窗实例
-        const comp = create(Notice, {
-          title: "社会你杨哥喊你来搬砖",
-          message: isValidate ? "请求登录!" : "校验失败!",
-          duration: 3000
-        })
-
-        comp.show();
+        let comp = null;
         if (isValidate) {
-          alert("登录中。。。");
+          comp = create(Notice, {
+            title: '登录中。。。',
+            message: isValidate ? '请求登录!' : '校验失败!',
+            duration: 3000, 
+          });
         } else {
-          alert("错误，需重新输入");
+          comp = create(Notice, {
+            title: '错误，需重新输入',
+            message: isValidate ? '请求登录!' : '校验失败!',
+            duration: 3000,
+          });
         }
+        comp.show();
       });
     },
   },
