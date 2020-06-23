@@ -2,8 +2,8 @@
  * @Author: RONGWEI PENG
  * @Date: 2020-06-10 22:11:26
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-16 22:15:51
- * @FilePath: /vue02/src/App.vue
+ * @LastEditTime: 2020-06-23 15:11:29
+ * @FilePath: \vue_test\src\App.vue
 -->
 <template>
   <div id="app">
@@ -11,7 +11,6 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/kform">KForm</router-link> | 
-      <router-link to="/mform">MForm</router-link> 
     </div>
     <router-view />
   </div>
