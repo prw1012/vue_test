@@ -2,8 +2,8 @@
  * @Author: RONGWEI PENG
  * @Date: 2020-06-18 20:45:21
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-23 13:45:24
- * @FilePath: \vue_test\src\utils\create.js
+ * @LastEditTime: 2020-06-23 20:57:56
+ * @FilePath: /vue02/src/utils/create copy.js
  */
 
 import Vue from 'vue';
@@ -33,4 +33,3 @@ function create(component, props) {
   return comp;
 }
 export default create;
-
