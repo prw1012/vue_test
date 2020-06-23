@@ -1,3 +1,10 @@
+/*
+ * @Author: RONGWEI PENG
+ * @Date: 2020-06-23 21:12:17
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2020-06-23 21:17:15
+ * @FilePath: /vue02/src/router/index.js
+ */ 
 import Vue from 'vue';
 // import VueRouter from 'vue-router';
 import VueRouter from '../kvue-router.js';
@@ -6,6 +13,11 @@ import Home from '../views/Home.vue';
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: '/hello',
+    name: 'Hello',
+    component: () => import('../components/HelloWorld.vue'),
+  },
   {
     path: '/',
     name: 'Home',
@@ -33,7 +45,7 @@ const routes = [
     path: '/detail/:id',
     name: 'Detail',
     component: () => import('../views/Detail.vue'),
-  }, 
+  },
 ];
 
 const router = new VueRouter({
