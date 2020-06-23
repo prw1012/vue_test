@@ -2,8 +2,8 @@
  * @Author: RONGWEI PENG
  * @Date: 2019-09-28 22:11:06
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-19 21:16:29
- * @FilePath: /vue02/src/components/common/KForm/index.vue
+ * @LastEditTime: 2020-06-23 13:57:22
+ * @FilePath: \vue_test\src\components\common\KForm\index.vue
 -->
 <template>
   <div>
@@ -13,11 +13,7 @@
         <KInput v-model="model.username" placeholder="abc"></KInput>
       </KFormItem>
       <KFormItem label="密码" prop="password">
-        <KInput
-          type="password"
-          v-model="model.password"
-          placeholder="abc"
-        ></KInput>
+        <KInput type="password" v-model="model.password" placeholder="abc"></KInput>
       </KFormItem>
 
       <KFormItem>
@@ -37,7 +33,7 @@ import KFormItem from '@/components/common/KForm/KFormItem.vue';
 import KForm from '@/components/common/KForm/KForm.vue';
 import create from '@/utils/create';
 import Notice from '@/components/Notice';
-
+ 
 export default {
   components: {
     KInput,
@@ -62,7 +58,7 @@ export default {
           comp = create(Notice, {
             title: '登录中。。。',
             message: isValidate ? '请求登录!' : '校验失败!',
-            duration: 3000, 
+            duration: 3000,
           });
         } else {
           comp = create(Notice, {
