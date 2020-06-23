@@ -29,18 +29,19 @@ export default class VueRouter {
     });
   }
   initComponent() {
+    // TODO 
+    const that = this;
     Vue.component('router-link', {
       props: {
         to: String,
       },
       render(h) {
-        console.log('console', this.$slots);
         return h('a', { attrs: { href: '#' + this.to } }, [this.$slots.default]);
       },
     });
     Vue.component('router-view', {
-      render: h =>{
-        const component = this.routerMap[this.app.current].component;
+      render(h) {
+        const component = that.routerMap[that.app.current].component;
         return h(component);
       },
     });
