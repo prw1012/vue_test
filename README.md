@@ -2,11 +2,11 @@
  * @Author: RONGWEI PENG
  * @Date: 2020-06-15 16:45:32
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-15 16:45:57
- * @FilePath: /vue02/README.md
+ * @LastEditTime: 2020-06-22 10:12:38
+ * @FilePath: \vue_test\README.md
 --> 
 # vue_test
-vue基础巩固
+Vue
 
 ## Project setup
 ```
