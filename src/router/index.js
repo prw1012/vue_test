@@ -2,8 +2,8 @@
  * @Author: RONGWEI PENG
  * @Date: 2020-06-23 21:12:17
  * @LastEditors: Do not edit
- * @LastEditTime: 2020-06-23 21:24:42
- * @FilePath: /vue02/src/router/index.js
+ * @LastEditTime: 2020-06-24 09:18:27
+ * @FilePath: \vue_test\src\router\index.js
  */ 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -25,7 +25,7 @@ const routes = [
     //   },
     // ],
   },
-
+// TODO   
   {
     path: '/about',
     name: 'About',
