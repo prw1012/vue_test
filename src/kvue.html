@@ -1,0 +1,75 @@
+<!--
+ * @Author: RONGWEI PENG
+ * @Date: 2020-06-24 14:02:28
+ * @LastEditTime: 2020-06-24 15:44:58
+ * @LastEditors: Do not edit
+ * @FilePath: \vue_test\src\kvue.html
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <pre id="json"></pre>
+  <div id="app">
+    <p>{{name}}</p>
+    <p k-text="name"></p>
+    <p>{{age}}</p>
+    <p>
+      {{doubleAge}}
+    </p>
+    <input type="text" k-model="name">
+    <button @click="changeName">呵呵</button>
+    <div k-html="html"></div>
+  </div>
+  <script src="./compile.js"></script>
+  <script src="./kvue.js"></script>
+  <script>
+    const kaikeba = new KVue({
+      el: '#app',
+      data: {
+        name: "I am test.",
+        age: 12,
+        html: '<button>这是一个按钮</button>'
+      },
+      created() {
+        console.log('开始啦', this)
+        setTimeout(() => {
+          this.name = '我是测试'
+        }, 1500)
+      },
+      methods: {
+        changeName() {
+          console.log('methods', this);
+          this.name = '哈喽'
+          this.age = 1
+        }
+      }
+    })
+
+    /*
+        const app = new KVue({
+          data: {
+            test: "I am test",
+            foo: {
+              bar: "bar"
+            }
+          }
+        });
+        document.getElementById('json').innerText = app.$data.test
+        // setTimeout(function () {
+        app.$data.test = "hello, kaikeba!";
+        app.$data.foo.bar = "oh my bar";
+        // }, 2000)
+    
+        console.log('app.$data.', app.$data); */
+  </script>
+</body>
+
+</html>
