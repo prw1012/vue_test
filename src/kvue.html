@@ -1,9 +1,9 @@
 <!--
  * @Author: RONGWEI PENG
  * @Date: 2020-06-24 14:02:28
- * @LastEditTime: 2020-06-24 15:44:58
+ * @LastEditTime: 2020-06-27 21:04:51
  * @LastEditors: Do not edit
- * @FilePath: \vue_test\src\kvue.html
+ * @FilePath: /vue02/src/kvue.html
  * @Description: 
 -->
 <!DOCTYPE html>
@@ -19,14 +19,14 @@
   <pre id="json"></pre>
   <div id="app">
     <p>{{name}}</p>
-    <p k-text="name"></p>
-    <p>{{age}}</p>
+    <!-- <p k-text="name"></p> -->
+   <!--  <p>{{age}}</p>
     <p>
       {{doubleAge}}
-    </p>
-    <input type="text" k-model="name">
+    </p> -->
+    <!-- <input type="text" k-model="name"> -->
     <button @click="changeName">呵呵</button>
-    <div k-html="html"></div>
+    <!-- <div k-html="html"></div> -->
   </div>
   <script src="./compile.js"></script>
   <script src="./kvue.js"></script>
@@ -39,10 +39,9 @@
         html: '<button>这是一个按钮</button>'
       },
       created() {
-        console.log('开始啦', this)
         setTimeout(() => {
           this.name = '我是测试'
-        }, 1500)
+        }, 1)
       },
       methods: {
         changeName() {

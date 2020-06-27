@@ -1,16 +1,16 @@
 /*
  * @Author: RONGWEI PENG
  * @Date: 2020-06-24 11:30:53
- * @LastEditTime: 2020-06-24 16:23:02
+ * @LastEditTime: 2020-06-27 20:09:42
  * @LastEditors: Do not edit
- * @FilePath: \vue_test\src\kvue.js
+ * @FilePath: /vue02/src/kvue.js
  * @Description:
  */
 
 class KVue {
   constructor(options) {
     this.$options = options;
-    this.$data = options.data;
+    this.$data = options && options.data;
     this.observe(this.$data);
 
     /*   // 测试
@@ -46,7 +46,7 @@ class KVue {
     Object.defineProperty(obj, key, {
       get() {
         //将Dep.target（即当前的Watcher对象存入Dep的deps中）
-        Dep.target && dep.addDep(Dep.target);
+        Dep.target && dep.addDep(Dep.target); //Dep.target是watcher实例
         return val;
       },
       set(newval) {
